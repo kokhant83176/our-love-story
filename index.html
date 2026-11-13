@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Love Story ❤️</title>
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;
+background:#10090b;
+color:#f8e6c0;
+font-family:Georgia,serif;
+text-align:center;
+min-height:100vh;
+overflow-x:hidden;
+}
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+padding:25px;
+background:linear-gradient(#10090bcc,#10090bdd),url('https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=1200') center/cover;
+}
+.rose{font-size:65px}
+h1{
+color:#e6c27a;
+font-size:42px;
+font-weight:normal;
+}
+p{line-height:1.8;color:#eadcc8}
+button{
+background:#b58a48;
+color:#160e0c;
+border:0;
+padding:15px 30px;
+border-radius:30px;
+font-size:16px;
+margin:15px;
+}
+#letter{
+display:none;
+max-width:500px;
+padding:25px;
+border:1px solid #b58a48;
+border-radius:15px;
+background:#1b1113;
+margin:20px auto;
+}
+.heart{
+position:fixed;
+bottom:-30px;
+animation:float 7s linear infinite;
+pointer-events:none;
+}
+@keyframes float{
+to{transform:translateY(-110vh) rotate(360deg);opacity:0}
+}
+</style>
+</head>
+<body>
+<section class="hero">
+<div class="rose">🌹</div>
+<p>TO MY SPECIAL PERSON</p>
+<h1>My Beautiful Love</h1>
+<p>You are my favorite chapter<br>in this beautiful story of life.</p>
+<button onclick="openLetter()">Open My Letter ❤️</button>
+<div id="letter">
+<h2>My Love ❤️</h2>
+<p>
+You are the most beautiful part of my life.
+Every moment with you is special.
+I may not be perfect, but my love for you is real.
+I want to make more beautiful memories with you.
+<br><br>
+Forever Yours 🌹
+</p>
+</div>
+<p>♡ OUR LOVE STORY ♡</p>
+</section>
+<script>
+function openLetter(){
+document.getElementById('letter').style.display='block';
+}
+function heart(){
+let h=document.createElement('div');
+h.className='heart';
+h.innerHTML='❤️';
+h.style.left=Math.random()*100+'vw';
+h.style.fontSize=(15+Math.random()*20)+'px';
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),7000);
+}
+setInterval(heart,700);
+</script>
+</body>
+</html>
