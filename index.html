@@ -68,6 +68,9 @@ Forever Yours 🌹
 <script>
 function openLove(){
 document.getElementById('letter').style.display='block';
+
+let music = document.getElementById('bgMusic');
+music.play();
 }
 function makeHeart(){
 let h=document.createElement('div');
@@ -80,5 +83,6 @@ setTimeout(()=>h.remove(),7000);
 }
 setInterval(makeHeart,600);
 </script>
+  <audio id="bgMusic" src="tiktok_audio.mp3" loop></audio>
 </body>
 </html>
